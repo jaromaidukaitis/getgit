@@ -43,11 +43,16 @@ body {
 }
 
 #user-card {
+	width: 100%;
+}
+
+#user {
 	box-sizing: border-box;
+	margin: 0 auto;
 	margin-top: 40px;
 	padding: 20px;
-	display: flex;
 	width: 60%;
+	display: flex;
 	border: 1px solid black;
 	border-top: 5px solid black;
 	justify-content: space-around;
@@ -73,8 +78,33 @@ body {
 	color: black;
 }
 
+#repos-card {
+	margin-top: 50px;
+	width: 100%;
+}
+
+#repos-card ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	border-radius: 50px;
+	width: 16%;
+	height: 50px;
+	margin: 1%;
+	padding: 1%;
+	text-decoration: none;
+}
+
 @media (max-width: 940px) {
-	#user-card {
+	#user {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -83,10 +113,23 @@ body {
 		width: 70%;
 		margin: 20px 0;
 	}
+
+	.card {
+		width: 46%;
+	}
 }
 
 @media (max-width: 580px) {
 	#navbar {
 		flex-direction: column;
+	}
+
+	#repos-card ul {
+		justify-content: center;
+	}
+
+	.card {
+		width: 80%;
+		margin: 15px 1%;
 	}
 }

@@ -5,8 +5,9 @@ class ErrorView {
 
 	static errorDisplay(error) {
 		return `
+		<div id="user">
 			<img
-				src="./assets/github-seeklogo.svg"
+				src="./assets/github-seeklogo-black.svg"
 				alt=""
 				id="user-pic"
 			/>
@@ -14,6 +15,7 @@ class ErrorView {
 				<h2 id="user-name">${error.status}</h2>
                 <p id="user-bio">${error.message}</p>
 			</div>
+		</div>
         `;
 	}
 }

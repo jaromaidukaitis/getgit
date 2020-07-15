@@ -5,6 +5,7 @@ class ProfileView {
 
 	static profileDisplay(user) {
 		return `
+		<div id="user">
 			<img
 				src="${user.picture}"
 				alt=""
@@ -15,6 +16,7 @@ class ProfileView {
                 <p id="user-bio">${user.bio}</p>
                 <span id="git-figure"></span><a href="${user.profile}" target="blank" id="profile-url">github/${user.id}</a>
 			</div>
+		</div>
         `;
 	}
 }
