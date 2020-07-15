@@ -13,10 +13,8 @@ searchButton.addEventListener("click", function () {
 	reqUser.open("GET", url);
 
 	reqUser.addEventListener("load", () => {
-		console.log(reqUser.status);
 		if (reqUser.status == 200) {
 			let userObject = JSON.parse(reqUser.responseText);
-			console.log(userObject);
 
 			let userResults = new User(
 				userObject.avatar_url,
@@ -26,9 +24,15 @@ searchButton.addEventListener("click", function () {
 				userObject.login
 			);
 
-			console.log(userResults);
-
 			userCard.innerHTML = ProfileView.profileDisplay(userResults.getUser());
+		} else {
+			let errorObject = JSON.parse(reqUser.responseText);
+
+			let errorResults = new Error(reqUser.status, errorObject.message);
+			console.log(errorObject);
+			console.log(errorResults);
+
+			userCard.innerHTML = ErrorView.errorDisplay(errorResults.getError());
 		}
 	});
 
