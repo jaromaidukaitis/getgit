@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GetGIT</title>
+		<link rel="stylesheet" href="style/main.css" />
+	</head>
+	<body>
+		<div id="navbar">
+			<div id="logo">
+				<img src="./assets/github-seeklogo.svg" alt="" id="gitlogo" />
+				<h1>GetGIT</h1>
+			</div>
+			<div id="div-form">
+				<input
+					type="text"
+					name="git-username"
+					id="git-username"
+					placeholder="Nome de usuário Github"
+				/>
+				<input type="submit" value="procurar" id="button" />
+			</div>
+		</div>
+		<div id="user-card"></div>
+
+		<script src="src/controllers/ProfileController.js"></script>
+		<script src="src/models/Profile.js"></script>
+		<script src="src/views/ProfileView.js"></script>
+	</body>
+</html>
