@@ -72,3 +72,20 @@ body {
 	text-decoration: none;
 	color: black;
 }
+
+@media (max-width: 940px) {
+	#user-card {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#user-pic {
+		width: 70%;
+	}
+}
+
+@media (max-width: 580px) {
+	#navbar {
+		flex-direction: column;
+	}
+}

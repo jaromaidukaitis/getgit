@@ -13,7 +13,7 @@ class ProfileView {
 			<div id="user-info">
 				<h2 id="user-name">${user.name}</h2>
                 <p id="user-bio">${user.bio}</p>
-                <a href="${user.profile}" target="blank" id="profile-url">github/${user.id}</a>
+                <span id="git-figure"></span><a href="${user.profile}" target="blank" id="profile-url">github/${user.id}</a>
 			</div>
         `;
 	}
