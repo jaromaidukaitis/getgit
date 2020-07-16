@@ -5,7 +5,7 @@ class ReposView {
 
 	static reposDisplay(repos) {
 		return `
-            <a href="${repos.reposLink}" class="card">
+            <a href="${repos.reposLink}" class="card" target="_blank">
                 <li>
                     ${repos.reposName}
                 </li>
